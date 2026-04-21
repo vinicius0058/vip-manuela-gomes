@@ -9,79 +9,102 @@
 body {
   margin:0;
   font-family: Arial;
-  background:#0a0a0a;
+  background: radial-gradient(circle at top,#1a1a1a,#000);
   color:#fff;
+  text-align:center;
 }
 
-/* HEADER */
-.header {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:15px;
-  border-bottom:1px solid #222;
+/* GLOW */
+body::before {
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:#ff0055;
+  filter:blur(120px);
+  top:-50px;
+  left:-50px;
+  opacity:0.4;
 }
 
+/* CONTAINER */
+.container {
+  max-width:500px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card {
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(255,0,85,0.2);
+}
+
+/* AVATAR */
 .avatar {
-  width:55px;
-  height:55px;
+  width:110px;
+  height:110px;
   border-radius:50%;
+  border:3px solid #ff0055;
+  margin:auto;
   background:url('https://via.placeholder.com/150') center/cover;
+  box-shadow:0 0 20px #ff0055;
 }
 
-.info h1 {
-  font-size:16px;
-  margin:0;
-}
+/* TEXT */
+h1 { color:#ff0055; }
+.subtitle { color:#aaa; }
 
-.info p {
-  margin:0;
-  color:#aaa;
-  font-size:13px;
-}
-
-/* STATS */
-.stats {
-  display:flex;
-  justify-content:space-around;
-  padding:15px;
-  border-bottom:1px solid #222;
-}
-
-.stats div {
-  font-size:14px;
-}
-
-.stats span {
+/* BOTÃO */
+.btn {
+  background:linear-gradient(45deg,#ff0055,#ff3388);
+  padding:16px;
+  border-radius:30px;
+  color:#fff;
+  font-size:18px;
   display:block;
+  margin:20px auto;
+  width:90%;
+  text-decoration:none;
   font-weight:bold;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
 }
 
 /* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:4px;
-}
-
-.grid div {
-  position:relative;
+  gap:5px;
 }
 
 .grid img {
   width:100%;
   height:120px;
   object-fit:cover;
-  filter:blur(8px);
+  filter:blur(12px);
 }
 
-.grid div::after {
-  content:"🔒";
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:20px;
+/* BADGE */
+.badge {
+  color:#00ff99;
+  margin-top:10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  background:#1a1a1a;
+  padding:10px;
+  border-radius:10px;
+  margin:8px 0;
+  font-size:14px;
 }
 
 /* CTA FIXO */
@@ -94,103 +117,99 @@ body {
   border-top:1px solid #222;
 }
 
-.btn {
-  background:linear-gradient(45deg,#ff0055,#ff3388);
-  padding:15px;
-  border-radius:30px;
-  color:#fff;
-  text-align:center;
-  font-weight:bold;
-  text-decoration:none;
-  display:block;
-}
-
 /* ONLINE */
 .online {
   color:#00ff99;
-  font-size:13px;
-  text-align:center;
+  font-size:14px;
+}
+
+/* ALERT */
+.alert {
+  color:#ff0055;
+  font-size:14px;
   margin-top:10px;
 }
 
-/* POPUP */
-.popup {
-  position:fixed;
-  bottom:80px;
-  left:10px;
-  background:#141414;
-  padding:10px 15px;
-  border-radius:10px;
-  font-size:13px;
-  display:none;
-  animation:fade 0.5s;
-}
-
-@keyframes fade {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
-}
 </style>
 
 <script>
+// online dinâmico
 function onlineFake(){
-  let n = Math.floor(Math.random()*30)+20;
+  let n = Math.floor(Math.random()*50)+150;
   document.getElementById("online").innerText =
-    n + " pessoas online agora";
+    "● " + n + " pessoas online agora";
 }
-
-function popupFake(){
-  let nomes = ["Carlos","João","Lucas","Pedro","Rafael"];
-  let cidade = ["SP","RJ","RS","MG"];
-  let nome = nomes[Math.floor(Math.random()*nomes.length)];
-  let cid = cidade[Math.floor(Math.random()*cidade.length)];
-
-  let p = document.getElementById("popup");
-  p.innerText = nome + " ("+cid+") entrou agora 🔥";
-  p.style.display="block";
-
-  setTimeout(()=>{p.style.display="none";},3000);
-}
-
-setInterval(onlineFake,3000);
-setInterval(popupFake,5000);
+setInterval(onlineFake,2000);
 </script>
 
 </head>
 
 <body>
 
-<div class="header">
-  <div class="avatar"></div>
-  <div class="info">
-    <h1>Manuela Gomes 🔥</h1>
-    <p>34 • Santa Maria RS</p>
-  </div>
-</div>
+<div class="container">
 
-<div class="stats">
-  <div><span>124</span>posts</div>
-  <div><span>8.3k</span>seguidores</div>
-  <div><span>92</span>seguindo</div>
-</div>
+<div class="card">
 
-<div class="online" id="online">...</div>
+<p style="color:#ff0055;">🔞 CONTEÚDO PARA MAIORES DE 18 ANOS</p>
+
+<div class="avatar"></div>
+
+<h1>Manuela Gomes 🔥</h1>
+<p class="subtitle">34 • Santa Maria RS</p>
+
+<p id="online" class="online">● 187 pessoas online agora</p>
+
+<p style="font-size:18px;">
+<b>O que você vai ver aqui… não posto em nenhum outro lugar 😈</b>
+</p>
+
+<p style="color:#aaa;">
+Conteúdo exclusivo, acesso privado e atualizações diárias.
+</p>
+
+<p>
+🔥 Fotos e vídeos exclusivos<br>
+💬 Conteúdos privados<br>
+😈 Sem censura • Sem filtro
+</p>
+
+<p class="alert">
+⚠️ Não é conteúdo público — acesso restrito
+</p>
+
+<a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
+🔥 LIBERAR ACESSO VIP R$9,90
+</a>
 
 <div class="grid">
-  <div><img src="https://via.placeholder.com/300x400"></div>
-  <div><img src="https://via.placeholder.com/300x400"></div>
-  <div><img src="https://via.placeholder.com/300x400"></div>
-  <div><img src="https://via.placeholder.com/300x400"></div>
-  <div><img src="https://via.placeholder.com/300x400"></div>
-  <div><img src="https://via.placeholder.com/300x400"></div>
+  <img src="https://via.placeholder.com/300x400">
+  <img src="https://via.placeholder.com/300x400">
+  <img src="https://via.placeholder.com/300x400">
+  <img src="https://via.placeholder.com/300x400">
+  <img src="https://via.placeholder.com/300x400">
+  <img src="https://via.placeholder.com/300x400">
 </div>
 
-<div class="popup" id="popup"></div>
+<p class="badge">🔥 Atualizações todos os dias</p>
+
+</div>
+
+<h2>💬 O que estão dizendo</h2>
+
+<div class="testimonial">“Entrei sem acreditar… agora não saio mais 🔥”</div>
+<div class="testimonial">“Vale cada centavo 😈”</div>
+<div class="testimonial">“Muito acima do que imaginei”</div>
+
+<h2>💸 Oferta hoje</h2>
+<p>De <s>R$47</s></p>
+<h1>R$9,90</h1>
+
+</div>
 
 <div class="cta">
-  <a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
-    🔥 ACESSAR CONTEÚDO VIP R$9,90
-  </a>
+<a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
+👉 ENTRAR AGORA 🔥
+</a>
 </div>
 
 </body>
