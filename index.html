@@ -131,12 +131,26 @@ h1 { color:#ff0055; }
 </style>
 
 <script>
-function onlineFake(){
-  let n = Math.floor(Math.random()*5)+15;
+let online = 15;
+
+function atualizarOnline(){
+  let variacao = Math.random();
+
+  if (variacao > 0.6) {
+    online += 1;
+  } else if (variacao < 0.3 && online > 12) {
+    online -= 1;
+  }
+
   document.getElementById("online").innerText =
-    "● " + n + " pessoas online agora";
+    "● " + online + " pessoas online agora";
 }
-setInterval(onlineFake,15);
+
+setInterval(() => {
+  atualizarOnline();
+}, Math.floor(Math.random() * 3000) + 2000);
+
+window.onload = atualizarOnline;
 </script>
 
 </head>
