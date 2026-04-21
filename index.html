@@ -14,6 +14,7 @@ body {
   text-align:center;
 }
 
+/* brilho fundo */
 body::before {
   content:"";
   position:fixed;
@@ -39,6 +40,7 @@ body::before {
   box-shadow:0 0 20px rgba(255,0,85,0.2);
 }
 
+/* FOTO REDONDA */
 .avatar {
   width:110px;
   height:110px;
@@ -52,6 +54,7 @@ body::before {
 h1 { color:#ff0055; }
 .subtitle { color:#aaa; }
 
+/* BOTÃO */
 .btn {
   background:linear-gradient(45deg,#ff0055,#ff3388);
   padding:16px;
@@ -72,17 +75,25 @@ h1 { color:#ff0055; }
   100%{transform:scale(1);}
 }
 
+/* GRID DE IMAGENS */
 .grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:5px;
 }
 
+/* EFEITO PREMIUM */
 .grid img {
   width:100%;
   height:120px;
   object-fit:cover;
-  filter:blur(12px);
+  filter:blur(10px) brightness(0.6);
+  transition:0.3s;
+}
+
+.grid img:hover {
+  filter:blur(0) brightness(1);
+  transform:scale(1.05);
 }
 
 .badge {
@@ -133,7 +144,6 @@ setInterval(onlineFake,2000);
 <body>
 
 <div class="container">
-
 <div class="card">
 
 <p style="color:#ff0055;">🔞 CONTEÚDO PARA MAIORES DE 18 ANOS</p>
@@ -141,21 +151,18 @@ setInterval(onlineFake,2000);
 <div class="avatar"></div>
 
 <h1>Manuela Gomes 🔥</h1>
-<p class="subtitle" >gauchinha 34 aninhos• Santa Maria RS</p>
+<p class="subtitle">gauchinha 34 aninhos • Santa Maria RS</p>
 
-<p id="online" class="online">● 7 pessoas online agora</p>
+<p id="online" class="online">● 187 pessoas online agora</p>
 
-<!-- 1 HEADLINE -->
 <p style="font-size:20px;">
 <b>Se você chegou até aqui… é porque quer ver o que eu não mostro em lugar nenhum 😈</b>
 </p>
 
-<!-- 2 URGÊNCIA -->
 <p style="color:#ff0055;">
 ⚠️ Acesso liberado só hoje por esse valor
 </p>
 
-<!-- 3 PROVA SOCIAL -->
 <p style="color:#00ff99;">
 🔥 Mais de 113 pessoas já entraram
 </p>
@@ -165,7 +172,7 @@ Conteúdo top exclusivo, acesso privado e atualizações diárias.
 </p>
 
 <p>
-🔥 Fotos e vídeos quentes exclusivos<br>
+🔥 Fotos e vídeos exclusivos<br>
 💬 Conteúdos privados<br>
 😈 Sem censura • Sem filtro
 </p>
@@ -174,27 +181,15 @@ Conteúdo top exclusivo, acesso privado e atualizações diárias.
 ⚠️ Não é conteúdo público — acesso restrito
 </p>
 
-<!-- 5 BOTÃO -->
 <a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
 👉 QUERO VER AGORA 🔥
 </a>
 
-<!-- 6 MICRO CONFIANÇA -->
-<p style=".grid img {
-  width:100%;
-  height:120px;
-  object-fit:cover;
-  filter:blur(8px);
-  transition:0.3s;
-}
-
-.grid img:hover {
-  filter:blur(0);
-  transform:scale(1.05);
-}">
+<p style="font-size:13px; color:#aaa;">
 🔒 Acesso imediato • 100% discreto
 </p>
 
+<!-- IMAGENS -->
 <div class="grid">
   <img src="1n..jpg">
   <img src="2.jpg">
@@ -210,10 +205,9 @@ Conteúdo top exclusivo, acesso privado e atualizações diárias.
 
 <h2>💬 O que estão dizendo</h2>
 
-<!-- 4 DEPOIMENTOS -->
-<div class="testimonial">“conteúdo top manuzinha outro nível mesmo 🔥”</div>
-<div class="testimonial">“posso falar que isso e muito melhor que xvideos kkkk 😈”</div>
-<div class="testimonial">“Melhor que muitos pagos caros”</div>
+<div class="testimonial">“conteúdo top manu outro nível 🔥”</div>
+<div class="testimonial">“Muito melhor que xvideos 😈”</div>
+<div class="testimonial">“melhor que muitos pagos caros”</div>
 
 <h2>💸 Oferta hoje</h2>
 <p>De <s>R$47</s></p>
@@ -223,7 +217,7 @@ Conteúdo top exclusivo, acesso privado e atualizações diárias.
 
 <div class="cta">
 <a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
-👉 QUERO ESSA PUTINHA AGORA 🔥
+👉 QUERO VER ESSA PUTINHA AGORA 🔥
 </a>
 </div>
 
