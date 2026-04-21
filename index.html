@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuela Gomes 🔥</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  color: #ff0055;
+}
+
+.btn {
+  background: linear-gradient(45deg,#ff0055,#ff3388);
+  padding: 16px;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  display: block;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 300px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  filter: blur(10px);
+}
+
+.lock {
+  position: relative;
+}
+
+.lock::after {
+  content: "🔒 VIP";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.badge {
+  color: #00ff99;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.small {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.urgency {
+  color: red;
+  font-weight: bold;
+}
+
+.timer {
+  font-size: 20px;
+  color: #ff0055;
+  margin: 10px 0;
+}
+</style>
+
+<script>
+let tempo = 600;
+function atualizarTimer(){
+  let min = Math.floor(tempo / 60);
+  let sec = tempo % 60;
+  document.getElementById("timer").innerText =
+    min + ":" + (sec < 10 ? "0"+sec : sec);
+  tempo--;
+  if(tempo >= 0) setTimeout(atualizarTimer, 1000);
+}
+window.onload = atualizarTimer;
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔒 Manuela Gomes</h1>
+<p>34 • Santa Maria RS</p>
+
+<p><b>Nem tudo que eu faço… dá pra postar aqui 😌</b></p>
+
+<p style="color:#00ff99;">🔥 Acesso liberado hoje</p>
+
+<a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
+🔥 LIBERAR ACESSO AGORA
+</a>
+
+<div class="timer">⏳ <span id="timer">10:00</span></div>
+
+<div class="grid">
+  <div class="lock"><img src="https://via.placeholder.com/300x400"></div>
+  <div class="lock"><img src="https://via.placeholder.com/300x400"></div>
+  <div class="lock"><img src="https://via.placeholder.com/300x400"></div>
+  <div class="lock"><img src="https://via.placeholder.com/300x400"></div>
+</div>
+
+<p class="badge">🔥 Conteúdos exclusivos todos os dias</p>
+
+<p>💬 “Entrei sem esperar… me surpreendi 🔥”</p>
+<p>💬 “Vale muito mais que R$10”</p>
+<p>💬 “Não consigo parar de ver…”</p>
+
+<h2>De <s>R$47</s> por apenas</h2>
+<h1>R$9,90</h1>
+
+<p class="urgency">⚠️ Últimas vagas disponíveis</p>
+
+<a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
+👉 ENTRAR NO VIP AGORA 🔥
+</a>
+
+<p class="small">
+🔒 Acesso privado • Liberação imediata
+</p>
+
+</div>
+
+</body>
+</html>
