@@ -14,7 +14,6 @@ body {
   text-align:center;
 }
 
-/* GLOW */
 body::before {
   content:"";
   position:fixed;
@@ -27,14 +26,12 @@ body::before {
   opacity:0.4;
 }
 
-/* CONTAINER */
 .container {
   max-width:500px;
   margin:auto;
   padding:20px;
 }
 
-/* CARD */
 .card {
   background:#111;
   padding:20px;
@@ -42,7 +39,6 @@ body::before {
   box-shadow:0 0 20px rgba(255,0,85,0.2);
 }
 
-/* AVATAR */
 .avatar {
   width:110px;
   height:110px;
@@ -53,11 +49,9 @@ body::before {
   box-shadow:0 0 20px #ff0055;
 }
 
-/* TEXT */
 h1 { color:#ff0055; }
 .subtitle { color:#aaa; }
 
-/* BOTÃO */
 .btn {
   background:linear-gradient(45deg,#ff0055,#ff3388);
   padding:16px;
@@ -78,7 +72,6 @@ h1 { color:#ff0055; }
   100%{transform:scale(1);}
 }
 
-/* GRID */
 .grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -92,13 +85,11 @@ h1 { color:#ff0055; }
   filter:blur(12px);
 }
 
-/* BADGE */
 .badge {
   color:#00ff99;
   margin-top:10px;
 }
 
-/* TESTIMONIAL */
 .testimonial {
   background:#1a1a1a;
   padding:10px;
@@ -107,7 +98,6 @@ h1 { color:#ff0055; }
   font-size:14px;
 }
 
-/* CTA FIXO */
 .cta {
   position:fixed;
   bottom:0;
@@ -117,23 +107,19 @@ h1 { color:#ff0055; }
   border-top:1px solid #222;
 }
 
-/* ONLINE */
 .online {
   color:#00ff99;
   font-size:14px;
 }
 
-/* ALERT */
 .alert {
   color:#ff0055;
   font-size:14px;
   margin-top:10px;
 }
-
 </style>
 
 <script>
-// online dinâmico
 function onlineFake(){
   let n = Math.floor(Math.random()*50)+150;
   document.getElementById("online").innerText =
@@ -159,8 +145,19 @@ setInterval(onlineFake,2000);
 
 <p id="online" class="online">● 187 pessoas online agora</p>
 
-<p style="font-size:18px;">
-<b>O que você vai ver aqui… não posto em nenhum outro lugar 😈</b>
+<!-- 1 HEADLINE -->
+<p style="font-size:20px;">
+<b>Se você chegou até aqui… é porque quer ver o que eu não mostro em lugar nenhum 😈</b>
+</p>
+
+<!-- 2 URGÊNCIA -->
+<p style="color:#ff0055;">
+⚠️ Acesso liberado só hoje com esse valor
+</p>
+
+<!-- 3 PROVA SOCIAL -->
+<p style="color:#00ff99;">
+🔥 Mais de 2.000 pessoas já entraram
 </p>
 
 <p style="color:#aaa;">
@@ -177,9 +174,15 @@ Conteúdo exclusivo, acesso privado e atualizações diárias.
 ⚠️ Não é conteúdo público — acesso restrito
 </p>
 
+<!-- 5 BOTÃO -->
 <a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
-🔥 LIBERAR ACESSO VIP R$9,90
+👉 QUERO VER AGORA 🔥
 </a>
+
+<!-- 6 MICRO CONFIANÇA -->
+<p style="font-size:13px; color:#aaa;">
+🔒 Acesso imediato • 100% discreto
+</p>
 
 <div class="grid">
   <img src="https://via.placeholder.com/300x400">
@@ -196,9 +199,10 @@ Conteúdo exclusivo, acesso privado e atualizações diárias.
 
 <h2>💬 O que estão dizendo</h2>
 
-<div class="testimonial">“Entrei sem acreditar… agora não saio mais 🔥”</div>
-<div class="testimonial">“Vale cada centavo 😈”</div>
-<div class="testimonial">“Muito acima do que imaginei”</div>
+<!-- 4 DEPOIMENTOS -->
+<div class="testimonial">“Achei que era mais um… mas é outro nível mesmo 🔥”</div>
+<div class="testimonial">“Não esperava tanto conteúdo assim 😈”</div>
+<div class="testimonial">“Melhor que muitos pagos caros”</div>
 
 <h2>💸 Oferta hoje</h2>
 <p>De <s>R$47</s></p>
@@ -208,7 +212,7 @@ Conteúdo exclusivo, acesso privado e atualizações diárias.
 
 <div class="cta">
 <a class="btn" href="https://pay.kiwify.com.br/M0VffCG" target="_blank">
-👉 ENTRAR AGORA 🔥
+👉 QUERO VER AGORA 🔥
 </a>
 </div>
 
